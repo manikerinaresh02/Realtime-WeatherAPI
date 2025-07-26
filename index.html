@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Google Fonts: Roboto and Roboto Slab -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="weather-container">
+        <div class="weather-search">
+            <input type="text" id="city" placeholder="Enter city">
+            <button onclick="getWeather()">Search</button>
+        </div>
+        <div id="weather-content" style="display:none;">
+            <div class="weather-header">
+                <div class="weather-location">
+                    <h1 id="city-name">Cairo</h1>
+                    <div id="date">November 12, 2023</div>
+                </div>
+                <div class="weather-temp-main">
+                    <div class="main-temp">
+                        <span id="main-temp">81°</span>
+                    </div>
+                    <div class="temp-range">
+                        <span id="high-temp">81°</span> /
+                        <span id="low-temp" class="low">60°</span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-main">
+                <img id="weather-icon" alt="Weather Icon" src="" style="display:inline-block;">
+                <div class="weather-desc">
+                    <span id="weather-desc">Partly Cloudy</span>
+                </div>
+            </div>
+            <div class="weather-tabs">
+                <div class="tab active" id="tab-hourly">Hourly</div>
+                <div class="tab" id="tab-daily">Daily</div>
+                <div class="tab" id="tab-details">Details</div>
+                <div class="tab" id="tab-precip">Precipitation</div>
+            </div>
+            <div class="tab-divider"></div>
+            <div id="hourly-forecast"></div>
+            <div id="daily-forecast" style="display:none;"></div>
+            <div id="weather-details" style="display:none;"></div>
+            <div id="precipitation-info" style="display:none;"></div>
+            <div id="weather-info"></div>
+        </div>
+    </div>
+    <div id="rain-effect" style="display:none;"></div>
+    <div id="snow-effect" style="display:none;"></div>
+    <script src="script.js"></script>
+</body>
+</html>
